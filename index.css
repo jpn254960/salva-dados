@@ -178,7 +178,7 @@ body{
         top: 1vh;
         left: 2vw;
         margin-bottom: 0pc;
-        z-index: 5;
+        z-index: 1;
     }
     #button:active{
         color: #545454;
@@ -207,7 +207,10 @@ body{
         font-size: 7vw;
     }
     #objetivo{
+        display: flex;
+        flex-direction: row;
         width: 80vw;
+        height: 100vw;
         position: absolute;
         top: 45vh;
         left: 15vw;
@@ -216,13 +219,12 @@ body{
         font-size: 7vw;
     }
     #ceta{
-        margin-top: 6vh;
+        margin-top: 10vh;
         width: 20vw;
     }
     #sobre_txt{
-        position: absolute;
-        top: 52vh;
-        left: 15vw;
+        margin-top: 0.2vh;
+        margin-left: 4vw;
         font-size: 2vh;
         width: 60vw;
     }
@@ -247,5 +249,9 @@ body{
     } 
     #objetivo{
         position: absolute;
+    }
+    #ceta{
+        margin-top: 5.5vh;
+        width: 20vw;
     }
 }
