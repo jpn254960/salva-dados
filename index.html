@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTTO FA</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="button" onclick="abrir()" class="mobile">☰</h1>
+    <section id="tela" onclick="fechar()">
+        <img id="logo" src="imgs/logo_tutto_fa.png" alt="ada">
+        <section id="paginas" class="mobile">
+            <p id="aba1" class="abas"> inicio </p>
+            <p id="aba2" class="abas"> avaliações </p>
+            <p id="aba3" class="abas"> contatos </p>
+            <p id="aba4" class="abas"> apartamentos </p>
+            <p id="aba5" class="abas"> escolas </p>
+        </section>
+
+        <section id="barra">
+            <p id="aba1" class="abas"> inicio </p>
+            <p id="aba2" class="abas"> avaliações </p>
+            <p id="aba3" class="abas"> contatos </p>
+            <p id="aba4" class="abas"> apartamentos </p>
+            <p id="aba5" class="abas"> escolas </p>
+        </section>
+        <section id="titulo">
+            <h1 id="titulo1">TUTTO FA</h1>
+            <h1 id="titulo2">REFORMAS</h1>
+        </section>
+        <section id="objetivo">
+            <h1 id="numero" class="objetivo_cima">01</h1>
+            <h1 id="sobre" class="objetivo_cima">sobre.</h1>
+            <section id="ceta"></section>
+        </section>
+        <h1 id="sobre_txt">Uma empresa especializada em reformas de auto padrão e em reformas escolares com entrega rápida e sem problemas</h1>
+        <img src="imgs/fundo_inicio.png" alt="dad" id="fundo">
+        
+        <section id="escolas">
+            <h1 id="text_escolas">escolas ></h1>
+        </section>
+
+    
+    </section>
+    </body>
+<script>
+    var aberto=1
+    function abrir(){
+        document.getElementById('paginas').style.display='flex'   
+    }
+    function fechar(){
+        if (aberto==1){
+            document.getElementById('paginas').style.display='none'
+        }
+    }
+</script>
+</html>
