@@ -1,257 +1,229 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 *{
-    overflow: hidden;
+    user-select: none;
     font-family: "Open Sans", serif;
     font-optical-sizing: auto;
     font-weight: 450;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
+    font-variation-settings:"width" 100;
 }
+
+@keyframes entrar{
+    0%{transform: translateX(100%);}
+    20%{transform: translateX(80%);}
+    40%{transform: translateX(60%);}
+    60%{transform: translateX(40%);}
+    80%{transform: translateX(20%);}
+    100%{transform: translateX(0%);}
+}
+@keyframes sair{
+    0%{transform: translateX(0%);}
+    20%{transform: translateX(20%);}
+    40%{transform: translateX(40%);}
+    60%{transform: translateX(60%);}
+    80%{transform: translateX(80%);}
+    100%{transform: translateX(100%);}
+    
+}
+
+
 @media (min-width: 1025px){
-    .mobile{
+    #bt_barra{
         display: none;
     }
-    #escolas{
-        position: absolute;
-        bottom: 10vh;
-        left: 52vw;
-        width: 8vw;
-        height: 8vh;
-        background-color: #000000;
-        color: white;
-        text-align: center;
+    body{
+        overflow: hidden;
+        margin: 0pc;
+        border:none;
+        background-color: white;
     }
-}
-body{
-    background-color:#F5F5F5;
-    border: none;
-    margin: 0pc;
-}
-#logo{
-    width: 4vw;
-    height: 4vw;
-    border-radius: 100%;
-    position: absolute;
-    top: 2vh;
-    left: 3vw;
-}
-#text_escolas{
-    cursor: pointer;
-    font-size: 1vw;
-    margin: auto;
-    margin-top: 2.3vh;
-    text-transform: uppercase;
-    font-weight: bold;
-
-}
-#text_escolas:hover{
-    color: #c8c8c8;
-    transition: color 0.2s;
-}
-#text_escolas:active{
-    color: #2d2d2d;
-}
-#barra{
-    position: absolute;
-    bottom: 0pc;
-    left: 0pc;
-    background-color: rgb(255, 255, 255);
-    width: 52vw;
-    height: 10vh;
-    color: #000000;
-    font-size: 1vw;
-    margin: auto;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-}
-.abas{
-    margin-top: 4vh;
-    text-transform: uppercase;
-    margin-left: 3vw;
-    font-weight: bold;
-    cursor: pointer;
-}
-.abas:hover{
-    transition: color 0.2s;
-    text-decoration: underline;
-    color: #888888;
-
-}
-.abas:active{
-    color: #2d2d2d;
-}
-#titulo{
-    width: 50vw;
-    height: 35vh;
-    position: absolute;
-    left: 8vw;
-    top: 12vh;
-    font-weight: bold;
-}
-#titulo1{
-    font-size: 4vw;
-    margin-bottom: 0pc;
-    margin-left: 12vw;
-}#titulo2{
-    font-size: 4vw;
-    margin-top: 0pc;
-    margin-bottom: 0px;
-}
-#fundo{
-    margin-top: 10vh;
-    margin-left: 40vw;
-    width: 55vw;
-    object-fit: cover;
-}
-#objetivo{
-    position: absolute;
-    top:55vh;
-    left: 9vw;
-    width: 35vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-}
-.objetivo_cima{
-    font-size: 1vw;
-    font-weight: bold;
-}
-#numero{
-    margin-left: 2vw;
-}
-#sobre{
-    margin-left: 4vw;
-}
-#ceta{
-    width: 7vw;
-    height: 0.5vh;
-    background-color: #000000;
-    margin-left: 3vw;
-    margin-top: 3vh;
-}
-#sobre_txt{
-    font-size: 1vw;
-    position: absolute;
-    top: 59vh;
-    left: 13vw;
-    width: 18vw;
-    background-color: transparent;
-    color: #545454;   
-}
-
- /* Ajustes para dispositivos Tablet */
-@media (max-width: 1024px) {
-    #fundo{
+    #titulos{
         position: absolute;
         top: 10vh;
+        left: 10vw;
+        text-transform: uppercase;
+        font-size: 3.5vw;
     }
-    #tela{
-        width: 100vw;
-        height: 100vh;
-        margin: 0px;
-    }
-    #logo{
-        position: absolute;
-        top: 1.5vw;
-        left: 45vw;
-        width: 10vw;
-        height: 10vw;
-        object-fit: cover;
-        border-radius: 100%;
-    }
-    #barra{
-      display: none;
-    }
-    #paginas{
-        margin: auto;
-        position: absolute;
-        top: 0px;
-    }
-    #button{
-        width: 10vw;
-        height: 5vh;
-        cursor: pointer;
-        font-size: 7vw;
-        position: absolute;
-        top: 1vh;
-        left: 2vw;
+    #t1{
+        font-weight: bold;
+        margin-left: 15vw;
         margin-bottom: 0pc;
-        z-index: 1;
     }
-    #button:active{
-        color: #545454;
+    #t2{
+        font-weight: bold;
+        margin-top: 0px;
     }
-    #paginas{
-        display:none; 
-        flex-direction: column;
-        position: fixed;
-        top: 0pc;
+    #subtitulo{
+        color: rgba(0, 0, 0, 0.753);
         width: 30vw;
-        height: 45vh;
-        background-color: #e9e8e8;
-        color: #000000;
-        text-align: center;
-        z-index: 2;
-        border-bottom-right-radius: 1vw;
-        font-size: 3vw;
+        position: absolute;
+        top: 47vh;
+        left: 10.5vw;
+        font-size:1vw;
+        font-weight: bold;
     }
-    #titulo{
+    #fundo{
+        height: 125vh;
+        position: absolute;
+        bottom: -28vh;
+        left: 25vw;
+    }
+    /* barra */
+    #barra{
         z-index: 1;
         position: absolute;
-        left: 7vw;
-        top: 15vh;
-    }
-    #titulo1,#titulo2{
-        font-size: 7vw;
-    }
-    #objetivo{
+        bottom: 0px;
+        left: 0px;
+        width: 50vw;
+        height: 12vh;
+        background-color:white;
         display: flex;
         flex-direction: row;
-        width: 80vw;
-        height: 100vw;
-        position: absolute;
-        top: 45vh;
-        left: 15vw;
+        gap: 1vw;
     }
-    #numero,#sobre{
-        font-size: 7vw;
+    .icons{
+        font-size: 1.2vw;
+        margin-left: 1vw;
+        margin-top: 5vh;
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
     }
-    #ceta{
-        margin-top: 10vh;
-        width: 20vw;
+    .icons:active{
+        color: rgba(0, 0, 0, 0.568);
+        text-decoration: none;
     }
-    #sobre_txt{
-        margin-top: 0.2vh;
-        margin-left: 4vw;
-        font-size: 2vh;
-        width: 60vw;
+    .icons:hover{
+        text-decoration: underline;
+        color: rgba(0, 0, 0, 0.836);
     }
-    #escolas{
-        background-color: #000000;
-        width: 50vw;
-        height: 8vh;
-        color: #F5F5F5;
+    /* escolas */
+    #bt_escolas{
+        font-size: 1.5vw;
+        line-height: 10vh;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
         text-align: center;
+        width: 15vw;
+        height: 10vh;
+        background-color: black;
+        color: white;
         position: absolute;
-        top: 80vh;
-        left: 20vw;
-    }
-    #text_escolas{
-        font-size: 4vw;
+        bottom: 12vh;
+        left: 50vw;
     }
 }
-/* ajustes para celular */
-@media (max-width: 768px) {
-    #titulo1,#titulo2{
-        font-size: 8vw;
-    } 
-    #objetivo{
-        position: absolute;
+@media (max-width:1024px){
+    body{
+        overflow: hidden;
+        border: none;
+        margin: 0px;
     }
-    #ceta{
-        margin-top: 5.5vh;
-        width: 20vw;
+    /* parte do folder */
+    #fundo{
+        position: absolute;
+        top: 3vh;
+        right: -35vw;
+        height: 70vh;      
+        object-fit: cover;  
+    }
+    #titulos{
+        text-shadow: 0px 0px 0.3vw black;
+        position: absolute;
+        left: 10vw;
+        top: 5vh;
+        text-transform: uppercase;
+        font-size: 5vw;
+    }
+    #t1{
+        font-weight: bold;
+        margin-left:20vw;
+        margin-bottom: 0pc;
+    }
+    #t2{
+        font-weight: bold;
+        margin-top: 0px;
+    }
+    /* parte da barra */
+    #bt_barra{
+        cursor: pointer;
+        position: absolute;
+        font-size: 10vw;
+        top: 0vh;
+        right: 1vw;
+        margin:0px;
+        z-index: 4;
+        animation: color 2s;
+    }
+    
+    #barra{
+        transform: translateX(100%);
+        position: absolute;
+        top: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width:100vw;
+        height: 100vh;
+        background-color: black;
+        justify-content: space-between;
+        z-index: 3;
+        padding: 5vh;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 1vw black;
+    }
+    .barra_0{
+        animation: sair 0.3s;
+    }
+    .barra_1{
+        animation: entrar 0.3s;
+    }
+    .icons{
+        margin: auto;
+        width: 40vw;
+        font-size: 2vh;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .icons:hover{
+        color: rgba(255, 255, 255, 0.582);
+    }
+    /* parte de baixo */
+    #subtitulo{
+        z-index: 1;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 50vh;
+        background-color: black;
+        color: white;
+    }
+    #t3{
+        margin: auto;
+        margin-top:13vh;
+        font-size: 5vw;
+        width: 80vw;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #bt_escolas{
+        font-size: 4vw;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        text-decoration: none;
+        top: 40vh;
+        width: 25vw;
+        height: 30vh;
+        background-color: black;
+        color: white;
+        line-height: 10vh;
+        text-align: center;
     }
 }

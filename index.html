@@ -3,56 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUTTO FA</title>
+    <title>Tutto fa</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
 </head>
-<body>
-    <h1 id="button" onclick="abrir()" class="mobile">☰</h1>
-    <section id="tela" onclick="fechar()">
-        <img id="logo" src="imgs/logo_tutto_fa.png" alt="ada">
-        <section id="paginas" class="mobile">
-            <p id="aba1" class="abas"> inicio </p>
-            <p id="aba2" class="abas"> avaliações </p>
-            <p id="aba3" class="abas"> contatos </p>
-            <p id="aba4" class="abas"> apartamentos </p>
-            <p id="aba5" class="abas"> escolas </p>
-        </section>
-
-        <section id="barra">
-            <p id="aba1" class="abas"> inicio </p>
-            <p id="aba2" class="abas"> avaliações </p>
-            <p id="aba3" class="abas"> contatos </p>
-            <p id="aba4" class="abas"> apartamentos </p>
-            <p id="aba5" class="abas"> escolas </p>
-        </section>
-        <section id="titulo">
-            <h1 id="titulo1">TUTTO FA</h1>
-            <h1 id="titulo2">REFORMAS</h1>
-        </section>
-        <section id="objetivo">
-            <h1 id="numero" class="objetivo_cima">01</h1>
-            <h1 id="sobre" class="objetivo_cima">sobre.</h1>
-            <h1 id="ceta"></h1>
-        </section>
-        <h1 id="sobre_txt">Uma empresa especializada em reformas de auto padrão e em reformas escolares com entrega rápida e sem problemas</h1>
-        <img src="imgs/fundo_inicio.png" alt="dad" id="fundo">
-        
-        <section id="escolas">
-            <h1 id="text_escolas">escolas ></h1>
-        </section>
-
-    
+<body> 
+    <h1 id="bt_barra" onclick="abrir()">=</h1>
+    <section id="barra" class="barra">
+        <a href="index.html" id="icon1" class="icons">sobre</a>
+        <a href="avaliações.html" id="icon1" class="icons">avaliações</a>
+        <a href="contatos.html" id="icon1" class="icons">contatos</a>
+        <a href="galeria_obras.html" id="icon1" class="icons">apartamentos</a>
+        <a href="galeria_escola.html" id="icon1" class="icons">escolas</a>
     </section>
-    </body>
-<script>
-    var aberto=1
-    function abrir(){
-        document.getElementById('paginas').style.display='flex'   
-    }
-    function fechar(){
-        if (aberto==1){
-            document.getElementById('paginas').style.display='none'
-        }
-    }
-</script>
+
+    <img src="imgs/fundo_in.png" alt="" id="fundo">
+    <section id="titulos">
+        <h1 id="t1">tutto fa</h1>
+        <h1 id="t2">reformas</h1>
+    </section>
+    <section id="subtitulo">
+        <h1 id="t3">Especialista em reformas de apartamentos, escolas e hospitais, com a qualidade e segurança que você precisa</h1>
+    </section>
+    <a href="galeria_escola.html" id="bt_escolas">escolas > </a>
+</body>
+<script src="index.js"></script>
 </html>
